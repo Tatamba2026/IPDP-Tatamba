@@ -1,0 +1,17 @@
+{
+  "name": "TATAMBA — Belajar Herbal Kalimantan Selatan",
+  "short_name": "TATAMBA",
+  "description": "Ekosistem pembelajaran digital tanaman obat Kalimantan Selatan untuk siswa SD/MI, dirancang dengan prinsip Universal Design for Learning.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1F7A4C",
+  "theme_color": "#1F7A4C",
+  "lang": "id",
+  "categories": ["education"],
+  "icons": [
+    { "src": "vendor/maskot-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "vendor/maskot-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

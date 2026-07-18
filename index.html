@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="id" data-tema="terang" data-kontras="normal">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TATAMBA — Belajar Herbal Kalimantan Selatan dengan Cara yang Menyenangkan!</title>
+<meta name="description" content="Microsite pembelajaran tanaman obat Kalimantan Selatan untuk siswa SD/MI, dirancang dengan prinsip Universal Design for Learning.">
+<meta name="theme-color" content="#1F7A4C">
+
+<!-- Font ramah anak: Baloo 2 (judul, bentuk membulat) + Lexend (isi, dirancang
+     untuk meningkatkan kecepatan baca — relevan untuk siswa dengan hambatan atensi).
+     Di-host lokal di vendor/fonts/ agar microsite tetap utuh tanpa koneksi internet. -->
+<link rel="preload" href="vendor/fonts/lexend-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="vendor/fonts/baloo-2-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="vendor/favicon-32.png">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<!-- Ikon antarmuka: sprite SVG lokal (diturunkan dari Bootstrap Icons, MIT).
+     Disisipkan langsung agar tidak menimbulkan permintaan jaringan dan tetap
+     tampil saat perangkat tidak memiliki koneksi. -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-arrow-counterclockwise" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
+  <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/></symbol><symbol id="i-book-half" viewBox="0 0 16 16"><path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/></symbol><symbol id="i-box-arrow-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+  <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/></symbol><symbol id="i-chat-heart-fill" viewBox="0 0 16 16"><path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9 9 0 0 0 8 15m0-9.007c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/></symbol><symbol id="i-circle-half" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/></symbol><symbol id="i-dash-lg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/></symbol><symbol id="i-envelope-fill" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/></symbol><symbol id="i-filetype-csv" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM3.517 14.841a1.13 1.13 0 0 0 .401.823q.195.162.478.252.284.091.665.091.507 0 .859-.158.354-.158.539-.44.187-.284.187-.656 0-.336-.134-.56a1 1 0 0 0-.375-.357 2 2 0 0 0-.566-.21l-.621-.144a1 1 0 0 1-.404-.176.37.37 0 0 1-.144-.299q0-.234.185-.384.188-.152.512-.152.214 0 .37.068a.6.6 0 0 1 .246.181.56.56 0 0 1 .12.258h.75a1.1 1.1 0 0 0-.2-.566 1.2 1.2 0 0 0-.5-.41 1.8 1.8 0 0 0-.78-.152q-.439 0-.776.15-.337.149-.527.421-.19.273-.19.639 0 .302.122.524.124.223.352.367.228.143.539.213l.618.144q.31.073.463.193a.39.39 0 0 1 .152.326.5.5 0 0 1-.085.29.56.56 0 0 1-.255.193q-.167.07-.413.07-.175 0-.32-.04a.8.8 0 0 1-.248-.115.58.58 0 0 1-.255-.384zM.806 13.693q0-.373.102-.633a.87.87 0 0 1 .302-.399.8.8 0 0 1 .475-.137q.225 0 .398.097a.7.7 0 0 1 .272.26.85.85 0 0 1 .12.381h.765v-.072a1.33 1.33 0 0 0-.466-.964 1.4 1.4 0 0 0-.489-.272 1.8 1.8 0 0 0-.606-.097q-.534 0-.911.223-.375.222-.572.632-.195.41-.196.979v.498q0 .568.193.976.197.407.572.626.375.217.914.217.439 0 .785-.164t.55-.454a1.27 1.27 0 0 0 .226-.674v-.076h-.764a.8.8 0 0 1-.118.363.7.7 0 0 1-.272.25.9.9 0 0 1-.401.087.85.85 0 0 1-.478-.132.83.83 0 0 1-.299-.392 1.7 1.7 0 0 1-.102-.627zm8.239 2.238h-.953l-1.338-3.999h.917l.896 3.138h.038l.888-3.138h.879z"/></symbol><symbol id="i-flower1" viewBox="0 0 16 16"><path d="M6.174 1.184a2 2 0 0 1 3.652 0A2 2 0 0 1 12.99 3.01a2 2 0 0 1 1.826 3.164 2 2 0 0 1 0 3.652 2 2 0 0 1-1.826 3.164 2 2 0 0 1-3.164 1.826 2 2 0 0 1-3.652 0A2 2 0 0 1 3.01 12.99a2 2 0 0 1-1.826-3.164 2 2 0 0 1 0-3.652A2 2 0 0 1 3.01 3.01a2 2 0 0 1 3.164-1.826M8 1a1 1 0 0 0-.998 1.03l.01.091q.017.116.054.296c.049.241.122.542.213.887.182.688.428 1.513.676 2.314L8 5.762l.045-.144c.248-.8.494-1.626.676-2.314.091-.345.164-.646.213-.887a5 5 0 0 0 .064-.386L9 2a1 1 0 0 0-1-1M2 9l.03-.002.091-.01a5 5 0 0 0 .296-.054c.241-.049.542-.122.887-.213a61 61 0 0 0 2.314-.676L5.762 8l-.144-.045a61 61 0 0 0-2.314-.676 17 17 0 0 0-.887-.213 5 5 0 0 0-.386-.064L2 7a1 1 0 1 0 0 2m7 5-.002-.03a5 5 0 0 0-.064-.386 16 16 0 0 0-.213-.888 61 61 0 0 0-.676-2.314L8 10.238l-.045.144c-.248.8-.494 1.626-.676 2.314-.091.345-.164.646-.213.887a5 5 0 0 0-.064.386L7 14a1 1 0 1 0 2 0m-5.696-2.134.025-.017a5 5 0 0 0 .303-.248c.184-.164.408-.377.661-.629A61 61 0 0 0 5.96 9.23l.103-.111-.147.033a61 61 0 0 0-2.343.572c-.344.093-.64.18-.874.258a5 5 0 0 0-.367.138l-.027.014a1 1 0 1 0 1 1.732zM4.5 14.062a1 1 0 0 0 1.366-.366l.014-.027q.014-.03.036-.084a5 5 0 0 0 .102-.283c.078-.233.165-.53.258-.874a61 61 0 0 0 .572-2.343l.033-.147-.11.102a61 61 0 0 0-1.743 1.667 17 17 0 0 0-.629.66 5 5 0 0 0-.248.304l-.017.025a1 1 0 0 0 .366 1.366m9.196-8.196a1 1 0 0 0-1-1.732l-.025.017a5 5 0 0 0-.303.248 17 17 0 0 0-.661.629A61 61 0 0 0 10.04 6.77l-.102.111.147-.033a61 61 0 0 0 2.342-.572c.345-.093.642-.18.875-.258a5 5 0 0 0 .367-.138zM11.5 1.938a1 1 0 0 0-1.366.366l-.014.027q-.014.03-.036.084a5 5 0 0 0-.102.283c-.078.233-.165.53-.258.875a61 61 0 0 0-.572 2.342l-.033.147.11-.102a61 61 0 0 0 1.743-1.667c.252-.253.465-.477.629-.66a5 5 0 0 0 .248-.304l.017-.025a1 1 0 0 0-.366-1.366M14 9a1 1 0 0 0 0-2l-.03.002a5 5 0 0 0-.386.064c-.242.049-.543.122-.888.213-.688.182-1.513.428-2.314.676L10.238 8l.144.045c.8.248 1.626.494 2.314.676.345.091.646.164.887.213a5 5 0 0 0 .386.064zM1.938 4.5a1 1 0 0 0 .393 1.38l.084.035q.108.045.283.103c.233.078.53.165.874.258a61 61 0 0 0 2.343.572l.147.033-.103-.111a61 61 0 0 0-1.666-1.742 17 17 0 0 0-.66-.629 5 5 0 0 0-.304-.248l-.025-.017a1 1 0 0 0-1.366.366m2.196-1.196.017.025a5 5 0 0 0 .248.303c.164.184.377.408.629.661A61 61 0 0 0 6.77 5.96l.111.102-.033-.147a61 61 0 0 0-.572-2.342c-.093-.345-.18-.642-.258-.875a5 5 0 0 0-.138-.367l-.014-.027a1 1 0 1 0-1.732 1m9.928 8.196a1 1 0 0 0-.366-1.366l-.027-.014a5 5 0 0 0-.367-.138c-.233-.078-.53-.165-.875-.258a61 61 0 0 0-2.342-.572l-.147-.033.102.111a61 61 0 0 0 1.667 1.742c.253.252.477.465.66.629a5 5 0 0 0 .304.248l.025.017a1 1 0 0 0 1.366-.366m-3.928 2.196a1 1 0 0 0 1.732-1l-.017-.025a5 5 0 0 0-.248-.303 17 17 0 0 0-.629-.661A61 61 0 0 0 9.23 10.04l-.111-.102.033.147a61 61 0 0 0 .572 2.342c.093.345.18.642.258.875a5 5 0 0 0 .138.367zM8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/></symbol><symbol id="i-geo-alt-fill" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></symbol><symbol id="i-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></symbol><symbol id="i-house-door-fill" viewBox="0 0 16 16"><path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/></symbol><symbol id="i-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></symbol><symbol id="i-journal-bookmark-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"/>
+  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/></symbol><symbol id="i-moon-stars-fill" viewBox="0 0 16 16"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+  <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/></symbol><symbol id="i-peace-fill" viewBox="0 0 16 16"><path d="M14 13.292A8 8 0 0 0 8.5.015v7.778zm-.708.708L8.5 9.206v6.778a7.97 7.97 0 0 0 4.792-1.986zM7.5 15.985V9.207L2.708 14A7.97 7.97 0 0 0 7.5 15.985M2 13.292A8 8 0 0 1 7.5.015v7.778z"/></symbol><symbol id="i-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/></symbol><symbol id="i-play-btn-fill" viewBox="0 0 16 16"><path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2m6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/></symbol><symbol id="i-play-fill" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/></symbol><symbol id="i-plus-lg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/></symbol><symbol id="i-printer-fill" viewBox="0 0 16 16"><path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1"/>
+  <path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/></symbol><symbol id="i-save2-fill" viewBox="0 0 16 16"><path d="M8.5 1.5A1.5 1.5 0 0 1 10 0h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h6c-.314.418-.5.937-.5 1.5v6h-2a.5.5 0 0 0-.354.854l2.5 2.5a.5.5 0 0 0 .708 0l2.5-2.5A.5.5 0 0 0 10.5 7.5h-2z"/></symbol><symbol id="i-send-fill" viewBox="0 0 16 16"><path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/></symbol><symbol id="i-shield-lock-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7 7 0 0 0 1.048-.625 11.8 11.8 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m0 5a1.5 1.5 0 0 1 .5 2.915l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99A1.5 1.5 0 0 1 8 5"/></symbol><symbol id="i-sun-fill" viewBox="0 0 16 16"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/></symbol><symbol id="i-unlock-fill" viewBox="0 0 16 16"><path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2"/></symbol><symbol id="i-volume-up-fill" viewBox="0 0 16 16"><path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"/>
+  <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"/>
+  <path d="M8.707 11.182A4.5 4.5 0 0 0 10.025 8a4.5 4.5 0 0 0-1.318-3.182L8 5.525A3.5 3.5 0 0 1 9.025 8 3.5 3.5 0 0 1 8 10.475zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06"/></symbol><symbol id="i-box-arrow-in-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1z"/>
+  <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/></symbol><symbol id="i-box-arrow-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1z"/>
+  <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708z"/></symbol><symbol id="i-check-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></symbol><symbol id="i-heart-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/></symbol><symbol id="i-info-circle-fill" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></symbol><symbol id="i-clipboard-check-fill" viewBox="0 0 16 16"><path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/></symbol><symbol id="i-arrow-right-circle-fill" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/></symbol><symbol id="i-check-lg" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/></symbol><symbol id="i-x-lg" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/></symbol><symbol id="i-lightbulb-fill" viewBox="0 0 16 16"><path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5"/></symbol><symbol id="i-trophy-fill" viewBox="0 0 16 16"><path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935"/></symbol><symbol id="i-arrow-repeat" viewBox="0 0 16 16"><path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
+  <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/></symbol></svg>
+
+
+<!-- ============ LOADING SCREEN ============ -->
+<div id="pemuat" role="status" aria-live="polite">
+  <div class="maskot" id="maskotPemuat"></div>
+  <p>Menyiapkan kebun herbal…</p>
+  <div class="titik" aria-hidden="true"><i></i><i></i><i></i></div>
+  <span class="sr">Halaman sedang dimuat</span>
+</div>
+
+<a class="lompat" href="#konten">Lompat ke konten utama</a>
+
+<!-- ============ HEADER ============ -->
+<header class="topbar">
+  <div class="wrap">
+    <div class="merek-blok">
+      <!-- Maskot TATAMBA: SVG kuncup daun berwajah, digambar di script.js -->
+      <div class="logo" id="slotLogo"></div>
+      <p class="merek">TATAMBA
+        <small>Teknologi Aktif &amp; Tanaman Obat Melalui Belajar Adaptif</small>
+      </p>
+    </div>
+
+    <!-- Alat bantu aksesibilitas -->
+    <div class="alat-bantu" role="group" aria-label="Alat bantu tampilan">
+      <span class="judul-alat" aria-hidden="true">Alat bantu:</span>
+      <button class="ab" id="kecilkan" aria-label="Perkecil ukuran teks"><svg class="bi" aria-hidden="true"><use href="#i-dash-lg"/></svg>A</button>
+      <button class="ab" id="besarkan" aria-label="Perbesar ukuran teks">A<svg class="bi" aria-hidden="true"><use href="#i-plus-lg"/></svg></button>
+      <button class="ab" id="tombolKontras" aria-pressed="false" aria-label="Mode kontras tinggi"><svg class="bi" aria-hidden="true"><use href="#i-circle-half"/></svg></button>
+      <button class="ab" id="tombolTema" aria-pressed="false" aria-label="Mode gelap"><svg class="bi" aria-hidden="true"><use href="#i-moon-stars-fill"/></svg></button>
+      <button class="ab" id="tombolTenang" aria-pressed="false"><svg class="bi" aria-hidden="true"><use href="#i-peace-fill"/></svg><span>Mode Tenang</span></button>
+    </div>
+  </div>
+</header>
+<div class="sasirangan" aria-hidden="true"></div>
+
+<!-- ============ NAVIGASI ============ -->
+<nav aria-label="Navigasi utama">
+  <div class="wrap">
+    <div class="menu">
+      <button class="tab" data-ke="beranda" aria-current="page"><svg class="bi" aria-hidden="true"><use href="#i-house-door-fill"/></svg>Beranda</button>
+      <button class="tab" data-ke="tanaman"><svg class="bi" aria-hidden="true"><use href="#i-flower1"/></svg>Galeri</button>
+      <button class="tab" data-ke="belajar"><svg class="bi" aria-hidden="true"><use href="#i-play-btn-fill"/></svg>Video</button>
+      <button class="tab" data-ke="jurnal"><svg class="bi" aria-hidden="true"><use href="#i-journal-bookmark-fill"/></svg>Jurnal</button>
+      <button class="tab" data-ke="tanya"><svg class="bi" aria-hidden="true"><use href="#i-chat-heart-fill"/></svg>Chatbot</button>
+      <button class="tab" data-ke="glosarium"><svg class="bi" aria-hidden="true"><use href="#i-book-half"/></svg>Glosarium</button>
+      <button class="tab" data-ke="tentang"><svg class="bi" aria-hidden="true"><use href="#i-people-fill"/></svg>Tentang</button>
+      <button class="tab" data-ke="asesmen"><svg class="bi" aria-hidden="true"><use href="#i-clipboard-check-fill"/></svg>Asesmen</button>
+      <button class="tab tab-admin" data-ke="admin"><svg class="bi" aria-hidden="true"><use href="#i-shield-lock-fill"/></svg>Admin</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="konten">
+
+<!-- ============== A. BERANDA ============== -->
+<section class="halaman aktif" id="beranda" aria-labelledby="j-beranda">
+  <div class="hero">
+    <h1 id="j-beranda">Kenali tanaman obat <em>Kalimantan Selatan</em> — satu daun setiap hari.</h1>
+    <p class="slogan">Belajar Herbal Kalimantan Selatan dengan Cara yang Menyenangkan!</p>
+    <div class="hero-aksi">
+      <button class="tombol" data-ke="tanaman"><svg class="bi" aria-hidden="true"><use href="#i-flower1"/></svg> Mulai jelajahi</button>
+      <button class="tombol biru" data-ke="tanya"><svg class="bi" aria-hidden="true"><use href="#i-chat-heart-fill"/></svg> Tanya TATAMBA</button>
+    </div>
+    <div class="kebun" id="kebun"></div>
+  </div>
+
+  <div class="judul"><h2>Pilih cara belajarmu</h2><p>Tiga jalur, satu tujuan: mengenal herbal Banua.</p></div>
+  <div class="grid3">
+    <button class="fitur f1" data-ke="tanaman">
+      <span class="ikon" aria-hidden="true">🍃</span><span class="nama-kartu">Jelajahi Tanaman</span>
+      <p>14 tanaman herbal Kalsel — termasuk kunyit, jahe, dan sirih — lengkap dengan nama Banjar, manfaat, dan cara pakainya.</p>
+      <span class="lanjut">Buka galeri →</span>
+    </button>
+    <button class="fitur f2" data-ke="belajar">
+      <span class="ikon" aria-hidden="true">🎬</span><span class="nama-kartu">Belajar Seru</span>
+      <p>Video pendek 3–5 menit. Tonton, lalu coba sendiri di rumah bersama keluarga.</p>
+      <span class="lanjut">Tonton video →</span>
+    </button>
+    <button class="fitur f3" data-ke="tanya">
+      <span class="ikon" aria-hidden="true">💬</span><span class="nama-kartu">Tanya TATAMBA</span>
+      <p>Punya pertanyaan tentang daun atau akar? Ketik saja, TATAMBA menjawab.</p>
+      <span class="lanjut">Mulai bertanya →</span>
+    </button>
+    <button class="fitur f5" data-ke="asesmen">
+      <span class="ikon" aria-hidden="true">📋</span><span class="nama-kartu">Uji Pemahamanmu</span>
+      <p>Kuis singkat yang menunjukkan bagian mana yang perlu kamu pelajari lagi, lalu menjelaskannya kembali.</p>
+      <span class="lanjut">Mulai kuis →</span>
+    </button>
+    <button class="fitur f4" data-ke="jurnal">
+      <span class="ikon" aria-hidden="true">📔</span><span class="nama-kartu">Jurnal Pilihan Kesehatan</span>
+      <p>Tulis satu hal yang kamu pelajari dan satu keputusan sehat yang akan kamu coba minggu ini.</p>
+      <span class="lanjut">Isi jurnal →</span>
+    </button>
+  </div>
+
+  <div class="judul"><h2>Kebun kita hari ini</h2><p>Angka ini bergerak setiap kali ada yang belajar.</p></div>
+  <div class="papan">
+    <div class="angka"><b data-hitung="14" id="nDipelajari">0</b><span>Tanaman dipelajari</span></div>
+    <div class="angka"><b data-hitung="1247">0</b><span>Siswa bergabung</span></div>
+    <div class="angka"><b data-hitung="36">0</b><span>Sekolah di Kalsel</span></div>
+    <div class="angka"><b data-hitung="12" id="nVideo">0</b><span>Video pembelajaran</span></div>
+    <div class="angka"><b id="nAsesmen">—</b><span>Skor asesmen terakhir</span></div>
+  </div>
+</section>
+
+<!-- ============== B. GALERI TANAMAN ============== -->
+<section class="halaman" id="tanaman" aria-labelledby="j-tanaman">
+  <div class="judul"><h2 id="j-tanaman">Jelajahi Tanaman 🍃</h2><p>14 tanaman, 3 nama untuk tiap tanaman. Ketuk kartu untuk membuka kisahnya.</p></div>
+  <div class="alat">
+    <input class="cari" id="cari" type="search" placeholder="Cari nama Banjar, Indonesia, atau ilmiah…" aria-label="Cari tanaman">
+    <button class="chip" data-filter="semua" aria-pressed="true">Semua</button>
+    <button class="chip" data-filter="Daun" aria-pressed="false">🍃 Tanaman Daun</button>
+    <button class="chip" data-filter="Akar" aria-pressed="false">🌱 Tanaman Akar</button>
+    <button class="chip" data-filter="Buah" aria-pressed="false">🍈 Tanaman Buah</button>
+    <button class="chip" data-filter="Bunga" aria-pressed="false">🌸 Tanaman Bunga</button>
+  </div>
+  <div class="galeri" id="galeri"></div>
+</section>
+
+<!-- ============== C. VIDEO PEMBELAJARAN ============== -->
+<section class="halaman" id="belajar" aria-labelledby="j-belajar">
+  <div class="judul"><h2 id="j-belajar">Belajar Seru 🎬</h2><p>Video pendek supaya fokus tetap terjaga. Tonton satu dulu, istirahat, baru lanjut.</p></div>
+
+  <div class="progres">
+    <div class="baris">
+      <b>Perjalanan belajarmu</b>
+      <span class="piala" id="pialaTeks">Belum ada video ditonton — ayo mulai dari yang pertama!</span>
+    </div>
+    <div class="rel" role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0" aria-label="Video yang sudah ditonton" id="relBar"><i id="relIsi"></i></div>
+  </div>
+
+  <div class="alat">
+    <button class="chip" data-topik="semua" aria-pressed="true">Semua topik</button>
+    <button class="chip" data-topik="Pengenalan Tanaman" aria-pressed="false">🔍 Pengenalan Tanaman</button>
+    <button class="chip" data-topik="Manfaat Herbal" aria-pressed="false">💚 Manfaat Herbal</button>
+    <button class="chip" data-topik="Cara Mengolah" aria-pressed="false">🫖 Cara Mengolah</button>
+    <button class="chip" data-topik="Kearifan Lokal" aria-pressed="false">🏡 Kearifan Lokal</button>
+  </div>
+
+  <div class="grid3" id="daftarVideo"></div>
+</section>
+
+<!-- ============== JURNAL PILIHAN KESEHATAN (instrumen karakter, §4.4) ============== -->
+<section class="halaman" id="jurnal" aria-labelledby="j-jurnal">
+  <div class="judul"><h2 id="j-jurnal">Jurnal Pilihan Kesehatan 📔</h2><p>Empat langkah kecil. Isi satu per satu — tidak perlu buru-buru.</p></div>
+
+  <p class="catatan">🔒 Jurnalmu tersimpan <b>di perangkat ini saja</b>. Tidak dikirim ke mana pun. Guru dapat membacanya lewat tombol <b>Cetak</b> di bawah.</p>
+
+  <div class="jurnal-maju" aria-hidden="true"><span class="bulat aktif" id="b1">1</span><span class="ruas"></span><span class="bulat" id="b2">2</span><span class="ruas"></span><span class="bulat" id="b3">3</span><span class="ruas"></span><span class="bulat" id="b4">4</span></div>
+
+  <form id="borangJurnal" novalidate>
+    <!-- LANGKAH 1 — kepedulian diri -->
+    <fieldset class="langkah" id="L1">
+      <legend><span class="nomor">1</span> Tanaman apa yang kupelajari hari ini?</legend>
+      <p class="dim">💚 Kepedulian diri</p>
+      <label for="jTanaman">Pilih tanamannya</label>
+      <select id="jTanaman"><option value="">— pilih satu —</option></select>
+
+      <p class="tanya-lagi">Apa manfaatnya untuk kesehatan?</p>
+      <p class="bantu">Ketuk kalimat yang cocok, atau tulis sendiri di bawah.</p>
+      <div class="pilihan" id="jManfaatChip" role="group" aria-label="Pilihan manfaat"></div>
+      <label class="sr" for="jManfaat">Tulis manfaatnya dengan kalimatmu sendiri</label>
+      <textarea id="jManfaat" placeholder="Tanaman ini berguna untuk…"></textarea>
+    </fieldset>
+
+    <!-- LANGKAH 2 — kebersihan -->
+    <fieldset class="langkah" id="L2">
+      <legend><span class="nomor">2</span> Bagaimana agar herbalnya aman dan bersih?</legend>
+      <p class="dim">🧼 Kebersihan</p>
+      <p class="bantu">Boleh pilih lebih dari satu.</p>
+      <div class="pilihan" id="jBersih" role="group" aria-label="Pilihan cara menjaga kebersihan"></div>
+      <label class="sr" for="jBersihLain">Cara lain</label>
+      <textarea id="jBersihLain" placeholder="Cara lain yang kamu tahu…"></textarea>
+    </fieldset>
+
+    <!-- LANGKAH 3 — disiplin -->
+    <fieldset class="langkah" id="L3">
+      <legend><span class="nomor">3</span> Satu keputusan sehat minggu ini</legend>
+      <p class="dim">⏰ Disiplin</p>
+      <p class="bantu">Pilih satu yang benar-benar akan kamu coba.</p>
+      <div class="pilihan" id="jKeputusan" role="group" aria-label="Pilihan keputusan sehat"></div>
+      <label class="sr" for="jKeputusanLain">Keputusanku sendiri</label>
+      <textarea id="jKeputusanLain" placeholder="Keputusan sehatku sendiri…"></textarea>
+    </fieldset>
+
+    <!-- LANGKAH 4 — Smileyometer + identitas -->
+    <fieldset class="langkah" id="L4">
+      <legend><span class="nomor">4</span> Bagaimana perasaanmu belajar hari ini?</legend>
+      <p class="dim">🙂 Smileyometer (Read &amp; MacFarlane)</p>
+      <div class="smiley" id="jRasa" role="radiogroup" aria-label="Perasaan belajar hari ini"></div>
+      <label for="jNama">Nama panggilanmu <span class="bantu" style="display:inline">(boleh dikosongkan)</span></label>
+      <input id="jNama" placeholder="Mis. Udin">
+    </fieldset>
+
+    <div class="jurnal-aksi">
+      <button type="button" class="tombol" id="simpanJurnal"><svg class="bi" aria-hidden="true"><use href="#i-save2-fill"/></svg> Simpan jurnalku</button>
+      <button type="button" class="tombol putih" id="kosongkanJurnal">Kosongkan</button>
+    </div>
+  </form>
+
+  <div class="judul"><h2>Jurnalku yang tersimpan</h2><p>Kumpulan refleksimu — bukti portofolio karakter.</p></div>
+  <div class="jurnal-aksi" style="margin-bottom:14px">
+    <button class="tombol putih" id="cetakJurnal"><svg class="bi" aria-hidden="true"><use href="#i-printer-fill"/></svg> Cetak / simpan PDF</button>
+    <button class="tombol putih" id="unduhJurnal"><svg class="bi" aria-hidden="true"><use href="#i-filetype-csv"/></svg> Unduh CSV (guru)</button>
+  </div>
+  <div id="daftarJurnal"></div>
+</section>
+
+<!-- ============== D. CHATBOT ============== -->
+<section class="halaman" id="tanya" aria-labelledby="j-tanya">
+  <div class="judul"><h2 id="j-tanya">Tanya TATAMBA 💬</h2><p>Tanyakan apa saja tentang tanaman herbal Kalimantan Selatan.</p></div>
+  <div class="obrolan">
+    <div class="kepala">
+      <div class="avatar" id="avatarBot"></div>
+      <div><b class="display" style="font-size:1.25rem">TATAMBA</b><div style="font-size:.8rem;opacity:.9">Teman belajar herbalmu</div></div>
+    </div>
+    <div class="riwayat" id="riwayat" role="log" aria-live="polite" aria-label="Percakapan dengan TATAMBA"></div>
+    <div class="saran" id="saran" role="group" aria-label="Pertanyaan yang disarankan"></div>
+    <div class="ketik">
+      <label class="sr" for="pesan">Tulis pertanyaanmu</label>
+      <input id="pesan" placeholder="Ketik pertanyaanmu…">
+      <button id="kirim" aria-label="Kirim pertanyaan"><svg class="bi" aria-hidden="true"><use href="#i-send-fill"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============== E. GLOSARIUM ============== -->
+<section class="halaman" id="glosarium" aria-labelledby="j-glosarium">
+  <div class="judul"><h2 id="j-glosarium">Glosarium 3 Bahasa 📖</h2><p>Satu benda, tiga nama: bahasa Banjar, bahasa Indonesia, dan nama ilmiah.</p></div>
+  <div class="alat">
+    <input class="cari" id="cariKata" type="search" placeholder="Cari kata dalam bahasa apa saja…" aria-label="Cari kata">
+    <button class="chip" data-jenis="semua" aria-pressed="true">Semua</button>
+    <button class="chip" data-jenis="Tanaman" aria-pressed="false">🌿 Nama tanaman</button>
+    <button class="chip" data-jenis="Istilah" aria-pressed="false">💬 Istilah Banjar</button>
+  </div>
+  <div class="abjad" id="abjad" role="group" aria-label="Saring menurut huruf awal"></div>
+  <div class="daftar-kata" id="daftarKata"></div>
+</section>
+
+<!-- ============== F. TENTANG / TIM ============== -->
+<section class="halaman" id="tentang" aria-labelledby="j-tentang">
+  <div class="judul"><h2 id="j-tentang">Tentang TATAMBA 👋</h2><p>Kenapa proyek ini ada, dan siapa yang membangunnya.</p></div>
+
+  <article class="panel" style="margin-bottom:16px">
+    <h3>Apa arti "TATAMBA"?</h3>
+    <p><b>T</b>eknologi <b>A</b>ktif &amp; <b>Ta</b>naman Obat <b>M</b>elalui <b>B</b>elajar <b>A</b>daptif. Dalam bahasa Banjar, <i>tatamba</i> berarti mengobati — dan itulah yang kami lakukan pada dua hal sekaligus: pengetahuan herbal yang mulai dilupakan, dan cara belajar yang belum ramah untuk semua anak.</p>
+  </article>
+
+  <div class="visi">
+    <article class="panel">
+      <h3>🎯 Visi</h3>
+      <p>Menjadi ekosistem pembelajaran digital yang membuat setiap siswa SD/MI di Kalimantan Selatan — apa pun cara belajarnya — mengenal, menghargai, dan mewarisi pengetahuan tanaman obat Banua.</p>
+    </article>
+    <article class="panel">
+      <h3>🚀 Misi</h3>
+      <ol>
+        <li>Mendokumentasikan tanaman obat Kalsel dalam tiga bahasa agar mudah diakses siswa dan guru.</li>
+        <li>Menyajikan materi IPAS Kelas V dengan prinsip UDL sehingga siswa dengan hambatan atensi tetap dapat mengikuti di kelas inklusif.</li>
+        <li>Menggunakan teknologi tanpa biaya (AR.js, GitHub Pages, Blender) agar sekolah mana pun bisa memakainya.</li>
+        <li>Menghubungkan kearifan lokal Banjar dan Dayak Meratus dengan kurikulum sekolah.</li>
+      </ol>
+    </article>
+  </div>
+
+  <div class="judul"><h2>Pendekatan kami: UDL</h2><p>Universal Design for Learning (CAST, 2018) — merancang satu materi yang sejak awal bisa dipakai semua anak, bukan menambal belakangan.</p></div>
+  <div class="udl">
+    <article class="prinsip p1"><h4>1. Banyak cara menyajikan</h4><p>Teks singkat, ilustrasi, video, dan audio pengucapan. Anak boleh memilih pintu masuknya sendiri.</p></article>
+    <article class="prinsip p2"><h4>2. Banyak cara menunjukkan</h4><p>Menandai tanaman yang dipelajari, menonton video, atau bertanya lewat chatbot — semua dihitung sebagai belajar.</p></article>
+    <article class="prinsip p3"><h4>3. Banyak cara menjaga minat</h4><p>Video maksimal 5 menit, progres yang terlihat, tombol besar, dan Mode Tenang untuk siswa yang mudah terdistraksi.</p></article>
+  </div>
+  <p class="catatan" style="margin-top:16px">🧠 <b>Kenapa Mode Tenang?</b> Bagi sebagian siswa ADHD, animasi dan warna cerah membantu menjaga perhatian; bagi sebagian lain justru membebani. UDL tidak memilih salah satunya — TATAMBA menyediakan keduanya dalam satu ketukan.</p>
+
+  <div class="judul"><h2>Tim Pengembang</h2><p>Ganti nama, foto, dan program studi sesuai dokumen EoI kalian (lihat array <code>TIM</code> di script.js).</p></div>
+  <div class="tim" id="tim"></div>
+
+  <article class="panel" style="margin-top:16px">
+    <h3>🤝 Mitra &amp; Kurikulum</h3>
+    <p>SD/MI Al-Madani Banjarmasin — sekolah mitra uji coba (tahap penjajakan informal).<br>Materi mengacu pada capaian pembelajaran IPAS Kelas V SD/MI, topik keanekaragaman hayati dan pemanfaatan tumbuhan.</p>
+  </article>
+</section>
+
+<!-- ============== ASESMEN ADAPTIF TERTANAM (Lapis 3) ============== -->
+<section class="halaman" id="asesmen" aria-labelledby="j-asesmen">
+  <div class="judul"><h2 id="j-asesmen">Uji Pemahamanmu 📋</h2><p>Bukan untuk mencari nilai — untuk tahu bagian mana yang perlu kamu tengok lagi.</p></div>
+  <div id="wadahAsesmen" aria-live="polite"></div>
+</section>
+
+<!-- ============== G. ADMIN ============== -->
+<section class="halaman" id="admin" aria-labelledby="j-admin">
+  <div class="judul"><h2 id="j-admin">Kelola Materi 🔐</h2><p>Ruang guru dan pengelola untuk menambah tanaman dan video.</p></div>
+
+  <div class="gerbang" id="gerbang">
+    <div class="panel">
+      <h3>Masuk sebagai pengelola</h3>
+      <p style="font-size:.85rem;color:var(--tinta-2)">Demo: kata sandi <b>tatamba2026</b></p>
+      <label class="sr" for="sandi">Kata sandi</label>
+      <input id="sandi" type="password" placeholder="Kata sandi">
+      <p class="galat" id="galat" role="alert"></p>
+      <button class="tombol" id="tombolMasuk" style="width:100%;justify-content:center"><svg class="bi" aria-hidden="true"><use href="#i-unlock-fill"/></svg> Masuk</button>
+    </div>
+    <p style="font-size:.78rem;color:var(--tinta-2);margin-top:12px">Login ini hanya tampilan demo dan tidak mengamankan apa pun — kata sandinya terbaca di kode. Autentikasi sungguhan dipasang pada tahap backend.</p>
+  </div>
+
+  <div class="dasbor" id="dasbor">
+    <p class="catatan">💾 <b>Mock database.</b> Perubahan disimpan di <code>localStorage</code> peramban ini saja — belum tersinkron antar-perangkat. Tahap backend akan menggantinya dengan basis data sungguhan.</p>
+
+    <div class="stat">
+      <div><b id="sTanaman">0</b><span>Tanaman herbal</span></div>
+      <div><b id="sVideo">0</b><span>Video pembelajaran</span></div>
+      <div><b id="sKata">0</b><span>Entri glosarium</span></div>
+      <div><b id="sTopik">4</b><span>Topik video</span></div>
+    </div>
+
+    <article class="panel" style="margin-bottom:18px">
+      <div class="kepala-panel">
+        <h3>🌿 Tanaman herbal</h3>
+        <div class="aksi">
+          <button class="mini" id="tambahTanaman"><svg class="bi" aria-hidden="true"><use href="#i-plus-lg"/></svg> Tambah</button>
+          <button class="mini" id="imporTanaman"><svg class="bi" aria-hidden="true"><use href="#i-box-arrow-in-down"/></svg> Impor JSON</button>
+          <button class="mini" id="eksporTanaman"><svg class="bi" aria-hidden="true"><use href="#i-box-arrow-up"/></svg> Ekspor JSON</button>
+        </div>
+      </div>
+      <div class="gulung">
+        <table class="tabel">
+          <caption class="sr">Daftar tanaman herbal yang tampil di galeri</caption>
+          <thead><tr><th>Nama</th><th>Banjar</th><th>Kategori</th><th>Aksi</th></tr></thead>
+          <tbody id="barisTanaman"></tbody>
+        </table>
+      </div>
+      <div id="borangTanaman"></div>
+    </article>
+
+    <article class="panel">
+      <div class="kepala-panel">
+        <h3>🎬 Video pembelajaran</h3>
+        <div class="aksi">
+          <button class="mini" id="tambahVideo"><svg class="bi" aria-hidden="true"><use href="#i-plus-lg"/></svg> Tambah</button>
+          <button class="mini" id="imporVideo"><svg class="bi" aria-hidden="true"><use href="#i-box-arrow-in-down"/></svg> Impor JSON</button>
+          <button class="mini" id="eksporVideo"><svg class="bi" aria-hidden="true"><use href="#i-box-arrow-up"/></svg> Ekspor JSON</button>
+        </div>
+      </div>
+      <div class="gulung">
+        <table class="tabel">
+          <caption class="sr">Daftar video pembelajaran</caption>
+          <thead><tr><th>Judul</th><th>Topik</th><th>Durasi</th><th>Aksi</th></tr></thead>
+          <tbody id="barisVideo"></tbody>
+        </table>
+      </div>
+      <div id="borangVideo"></div>
+    </article>
+
+    <article class="panel" style="margin-top:18px">
+      <div class="kepala-panel">
+        <h3>📋 Butir asesmen</h3>
+        <div class="aksi">
+          <button class="mini" id="imporAsesmen"><svg class="bi" aria-hidden="true"><use href="#i-box-arrow-in-down"/></svg> Impor JSON</button>
+          <button class="mini" id="eksporAsesmen"><svg class="bi" aria-hidden="true"><use href="#i-box-arrow-up"/></svg> Ekspor JSON</button>
+          <button class="mini" id="eksporHasil"><svg class="bi" aria-hidden="true"><use href="#i-filetype-csv"/></svg> Unduh hasil siswa (CSV)</button>
+        </div>
+      </div>
+      <div class="gulung">
+        <table class="tabel">
+          <caption class="sr">Daftar butir asesmen adaptif</caption>
+          <thead><tr><th>Pertanyaan</th><th>Konsep</th><th>Jenis</th></tr></thead>
+          <tbody id="barisAsesmen"></tbody>
+        </table>
+      </div>
+      <p style="font-size:.78rem;color:var(--tinta-2);margin-top:10px">Penyuntingan butir dilakukan lewat berkas <code>data/asesmen.json</code> — lihat CARA_GANTI_KONTEN.md. Setiap butir wajib memiliki kolom <code>konsep</code>.</p>
+    </article>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+      <button class="tombol putih" id="keluar"><svg class="bi" aria-hidden="true"><use href="#i-box-arrow-left"/></svg> Keluar</button>
+      <button class="tombol putih" id="setelUlang"><svg class="bi" aria-hidden="true"><use href="#i-arrow-counterclockwise"/></svg> Kembalikan data awal</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============== MODAL DETAIL TANAMAN ============== -->
+<div class="tirai" id="tirai" role="dialog" aria-modal="true" aria-labelledby="judulDetail">
+  <div class="kartu-detail">
+    <div class="kepala" id="kepalaDetail"></div>
+    <div class="badan" id="badanDetail"></div>
+    <div class="kaki">
+      <button class="tombol" id="tandai">✅ Sudah kupelajari</button>
+      <button class="tombol putih" id="tutup">Tutup</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============== TOAST ============== -->
+<div id="toaster" aria-live="polite" aria-atomic="false"></div>
+
+<div class="sasirangan" aria-hidden="true"></div>
+
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="wrap">
+    <div class="kaki-grid">
+      <div>
+        <div class="kaki-merek">
+          <div id="maskotKaki"></div>
+          <h4 style="margin:0">TATAMBA</h4>
+        </div>
+        <p style="margin-top:10px">Ekosistem pembelajaran digital tanaman obat Kalimantan Selatan untuk siswa SD/MI. Dirancang dengan prinsip Universal Design for Learning (CAST, 2018).</p>
+      </div>
+      <div>
+        <h4>Jelajahi</h4>
+        <ul>
+          <li><a href="#" data-ke="tanaman"><svg class="bi" aria-hidden="true"><use href="#i-flower1"/></svg> Galeri Tanaman</a></li>
+          <li><a href="#" data-ke="belajar"><svg class="bi" aria-hidden="true"><use href="#i-play-btn-fill"/></svg> Video Pembelajaran</a></li>
+          <li><a href="#" data-ke="glosarium"><svg class="bi" aria-hidden="true"><use href="#i-book-half"/></svg> Glosarium 3 Bahasa</a></li>
+          <li><a href="#" data-ke="tentang"><svg class="bi" aria-hidden="true"><use href="#i-people-fill"/></svg> Tentang &amp; Tim</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="mailto:tatamba.ulm@gmail.com"><svg class="bi" aria-hidden="true"><use href="#i-envelope-fill"/></svg> tatamba.ulm@gmail.com</a></li>
+          <li><a href="https://instagram.com/" target="_blank" rel="noopener"><svg class="bi" aria-hidden="true"><use href="#i-instagram"/></svg> @tatamba.id</a></li>
+          <li><a href="https://github.com/" target="_blank" rel="noopener"><svg class="bi" aria-hidden="true"><use href="#i-github"/></svg> Kode sumber</a></li>
+          <li><span><svg class="bi" aria-hidden="true"><use href="#i-geo-alt-fill"/></svg> Universitas Lambung Mangkurat, Banjarmasin</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="kaki-bawah">
+      © 2026 Tim TATAMBA · Universitas Lambung Mangkurat · Dibuat untuk LIDM 2026<br>
+      Nama tanaman dan kearifan lokal dihimpun dari masyarakat Banjar dan Dayak Meratus.
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
