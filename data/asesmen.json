@@ -1,0 +1,183 @@
+{
+  "_catatan": "Butir asesmen adaptif TATAMBA. Setiap butir WAJIB memiliki 'konsep' — inilah yang memungkinkan sistem mendiagnosis bagian mana yang belum dikuasai siswa, bukan sekadar menghitung skor. Empat konsep sengaja disamakan dengan empat topik video, sehingga remediasi dapat mengarahkan siswa ke video yang tepat. Lihat CARA_GANTI_KONTEN.md.",
+  "_ambang": 65,
+  "_amanKonten": "Butir tidak boleh menyebut takaran, dosis, frekuensi pemakaian, atau menyarankan pengobatan. Gunakan rumusan 'secara tradisional digunakan', bukan 'menyembuhkan'.",
+
+  "konsep": [
+    {
+      "id": "ciri",
+      "nama": "Mengenali ciri tanaman",
+      "ikon": "🔍",
+      "topikVideo": "Pengenalan Tanaman",
+      "ringkas": "Mengenali tanaman dari bentuk, warna, aroma, dan bagian tubuhnya."
+    },
+    {
+      "id": "manfaat",
+      "nama": "Manfaat tradisional",
+      "ikon": "💚",
+      "topikVideo": "Manfaat Herbal",
+      "ringkas": "Mengetahui untuk apa tanaman itu secara tradisional digunakan masyarakat."
+    },
+    {
+      "id": "cara",
+      "nama": "Cara penyiapan yang bersih",
+      "ikon": "🫖",
+      "topikVideo": "Cara Mengolah",
+      "ringkas": "Mengetahui bagaimana bahan disiapkan dengan cara yang bersih dan aman."
+    },
+    {
+      "id": "budaya",
+      "nama": "Kearifan lokal",
+      "ikon": "🏡",
+      "topikVideo": "Kearifan Lokal",
+      "ringkas": "Memahami kaitan tanaman dengan bahasa, adat, dan alam Banua."
+    }
+  ],
+
+  "butir": [
+    {
+      "id": "u1", "konsep": "ciri", "kunci": true, "tanaman": "kunyit",
+      "tanya": "Rimpang tanaman ini beruas-ruas. Kalau dipatahkan, bagian dalamnya oranye terang dan wangi. Tanaman apakah itu?",
+      "opsi": ["Jahe", "Kunyit", "Bawang Dayak", "Kelakai"],
+      "jawab": 1,
+      "umpan": "Betul, itu kunyit — orang Banjar menyebutnya janar. Warna oranyenya menempel di tangan."
+    },
+    {
+      "id": "u2", "konsep": "ciri", "kunci": true, "tanaman": "sirih",
+      "tanya": "Daun apa yang bentuknya seperti hati, mengkilap, dan merambat di pagar rumah?",
+      "opsi": ["Daun sirih", "Daun kelakai", "Daun sungkai", "Daun karamunting"],
+      "jawab": 0,
+      "umpan": "Betul. Daun sirih berbentuk hati dan beraroma tajam saat diremas."
+    },
+    {
+      "id": "u3", "konsep": "ciri", "kunci": false, "tanaman": "kelakai",
+      "tanya": "Kelakai tumbuh di rawa. Bagaimana bentuk pucuk mudanya?",
+      "opsi": ["Bulat seperti bola", "Melengkung seperti gagang biola", "Lurus seperti lidi", "Pipih seperti pita"],
+      "jawab": 1,
+      "umpan": "Betul. Pucuk kelakai muda melengkung dan berwarna kemerahan."
+    },
+
+    {
+      "id": "u4", "konsep": "manfaat", "kunci": true, "tanaman": "kelakai",
+      "tanya": "Kelakai sering dimasak jadi sayur oleh orang Banua. Secara tradisional, kelakai dikenal membantu mencegah apa?",
+      "opsi": ["Sakit gigi", "Kurang darah", "Mata minus", "Kaki pegal"],
+      "jawab": 1,
+      "umpan": "Betul. Kelakai kaya zat besi, sehingga dikenal membantu mencegah kurang darah."
+    },
+    {
+      "id": "u5", "konsep": "manfaat", "kunci": true, "tanaman": "jahe",
+      "tanya": "Saat badan terasa dingin dan masuk angin, tanaman apa yang secara tradisional diseduh orang Banjar?",
+      "opsi": ["Bunga telang", "Jahe", "Mengkudu", "Kasturi"],
+      "jawab": 1,
+      "umpan": "Betul. Jahe — orang Banjar menyebutnya lai — dikenal menghangatkan badan."
+    },
+    {
+      "id": "u6", "konsep": "manfaat", "kunci": false, "tanaman": "sirih",
+      "tanya": "Daun sirih secara tradisional digunakan untuk membantu menghentikan apa?",
+      "opsi": ["Batuk", "Mimisan", "Cegukan", "Bersin"],
+      "jawab": 1,
+      "umpan": "Betul. Daun sirih digulung untuk membantu menahan mimisan — cara lama yang masih dipakai."
+    },
+
+    {
+      "id": "u7", "konsep": "cara", "kunci": true, "tanaman": "kunyit",
+      "tanya": "Bagaimana kunyit biasa disiapkan menjadi jamu kunyit asam?",
+      "opsi": ["Dibakar sampai hitam", "Diparut lalu diperas", "Dimakan mentah utuh", "Dijemur lalu dibakar"],
+      "jawab": 1,
+      "umpan": "Betul. Kunyit diparut, lalu diperas dan disaring airnya."
+    },
+    {
+      "id": "u8", "konsep": "cara", "kunci": true,
+      "tanya": "Sebelum memegang dan menyiapkan bahan herbal, apa yang paling penting dilakukan?",
+      "opsi": ["Mencuci tangan lebih dulu", "Menyalakan lampu", "Membuka jendela", "Memakai sarung tangan plastik"],
+      "jawab": 0,
+      "umpan": "Betul. Mencuci tangan lebih dulu membuat bahan tetap bersih dan aman."
+    },
+    {
+      "id": "u9", "konsep": "cara", "kunci": true,
+      "tanya": "Udin ingin mencoba ramuan herbal untuk keluhannya. Apa yang paling tepat ia lakukan lebih dulu?",
+      "opsi": ["Langsung meminumnya sendiri", "Bertanya kepada orang dewasa atau tenaga kesehatan", "Mencari tahu di kolom komentar", "Mencampur beberapa tanaman sekaligus"],
+      "jawab": 1,
+      "umpan": "Betul sekali. Mengetahui batas — kapan harus bertanya kepada orang dewasa — adalah bagian terpenting dari tatamba."
+    },
+
+    {
+      "id": "u10", "konsep": "budaya", "kunci": true, "tanaman": "bajakah",
+      "tanya": "Dalam bahasa Dayak, kata \"bajakah\" berarti apa?",
+      "opsi": ["Daun", "Akar", "Bunga", "Air"],
+      "jawab": 1,
+      "umpan": "Betul. Bajakah berarti akar — dan akar gantung ini menyimpan air yang bisa diminum di hutan."
+    },
+    {
+      "id": "u11", "konsep": "budaya", "kunci": true, "tanaman": "kasturi",
+      "tanya": "Kasturi adalah mangga kecil yang hanya ada di satu tempat di dunia. Di mana?",
+      "opsi": ["Jawa Barat", "Kalimantan Selatan", "Sumatra Utara", "Papua"],
+      "jawab": 1,
+      "umpan": "Betul. Kasturi endemik Kalimantan Selatan dan menjadi maskot flora provinsi kita."
+    },
+    {
+      "id": "u12", "konsep": "budaya", "kunci": false, "tanaman": "akarkuning",
+      "tanya": "Getah kuning dari Akar Kuning dahulu dipakai untuk apa selain sebagai herbal?",
+      "opsi": ["Pewarna alami kain", "Perekat perahu", "Bahan bakar lampu", "Pengawet ikan"],
+      "jawab": 0,
+      "umpan": "Betul. Warna kuningnya dipakai mewarnai kain — termasuk kain sasirangan."
+    },
+
+    {
+      "id": "r1", "konsep": "ciri", "ulang": true, "tanaman": "telang",
+      "tanya": "Bunga apa yang berwarna biru pekat dan berbentuk seperti kupu-kupu?",
+      "opsi": ["Karamunting", "Kumis kucing", "Bunga telang", "Mengkudu"],
+      "jawab": 2,
+      "umpan": "Betul. Bunga telang biru dan merambat di pagar."
+    },
+    {
+      "id": "r2", "konsep": "ciri", "ulang": true, "tanaman": "bawang",
+      "tanya": "Bawang Dayak mudah dikenali dari warna umbinya. Apa warnanya?",
+      "opsi": ["Putih", "Merah menyala", "Hijau muda", "Coklat tua"],
+      "jawab": 1,
+      "umpan": "Betul. Umbinya merah menyala, seperti bawang merah kecil."
+    },
+    {
+      "id": "r3", "konsep": "manfaat", "ulang": true, "tanaman": "kumiskucing",
+      "tanya": "Kumis kucing secara tradisional dikenal membantu menjaga kesehatan organ apa?",
+      "opsi": ["Ginjal", "Mata", "Telinga", "Gigi"],
+      "jawab": 0,
+      "umpan": "Betul. Kumis kucing dikenal membantu memperlancar buang air kecil dan menjaga ginjal."
+    },
+    {
+      "id": "r4", "konsep": "manfaat", "ulang": true, "tanaman": "sungkai",
+      "tanya": "Saat badan meriang, pucuk tanaman apa yang secara tradisional direbus orang Banjar?",
+      "opsi": ["Sungkai", "Kasturi", "Telang", "Mengkudu"],
+      "jawab": 0,
+      "umpan": "Betul. Pucuk sungkai terasa pahit dan dikenal meredakan demam."
+    },
+    {
+      "id": "r5", "konsep": "cara", "ulang": true, "tanaman": "telang",
+      "tanya": "Teh bunga telang berwarna biru. Apa yang terjadi kalau ditetesi jeruk nipis?",
+      "opsi": ["Warnanya hilang", "Berubah jadi ungu", "Berubah jadi hijau", "Tidak berubah"],
+      "jawab": 1,
+      "umpan": "Betul! Itu percobaan asam-basa alami — biru berubah jadi ungu."
+    },
+    {
+      "id": "r6", "konsep": "cara", "ulang": true,
+      "tanya": "Daun mana yang sebaiknya dipilih saat menyiapkan bahan herbal?",
+      "opsi": ["Yang sudah layu", "Yang segar", "Yang berlubang", "Yang jatuh di tanah"],
+      "jawab": 1,
+      "umpan": "Betul. Daun yang segar lebih bersih dan aman."
+    },
+    {
+      "id": "r7", "konsep": "budaya", "ulang": true, "tanaman": "sirih",
+      "tanya": "Dalam adat Banjar, daun sirih sering hadir saat acara apa?",
+      "opsi": ["Menyambut tamu", "Membangun rumah", "Menanam padi", "Menangkap ikan"],
+      "jawab": 0,
+      "umpan": "Betul. Sirih menjadi lambang penghormatan kepada tamu."
+    },
+    {
+      "id": "r8", "konsep": "budaya", "ulang": true, "tanaman": "karamunting",
+      "tanya": "Warna bunga karamunting sama dengan salah satu warna kain khas Kalsel. Kain apa?",
+      "opsi": ["Batik", "Sasirangan", "Songket", "Ulos"],
+      "jawab": 1,
+      "umpan": "Betul. Ungu karamunting sama dengan salah satu warna kain sasirangan."
+    }
+  ]
+}

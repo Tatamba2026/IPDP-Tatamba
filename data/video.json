@@ -1,0 +1,122 @@
+[
+  {
+    "id": "v1",
+    "topik": "Pengenalan Tanaman",
+    "j": "Kenalan dengan Kunyit (Janar)",
+    "d": "Kupas satu rimpang, lihat oranyenya, cium wanginya. Kenapa janar ada di hampir semua dapur Banjar?",
+    "t": "4:12",
+    "bentuk": "rimpang",
+    "w1": "#FF9A1F",
+    "w2": "#5FBF7E"
+  },
+  {
+    "id": "v2",
+    "topik": "Pengenalan Tanaman",
+    "j": "Jahe atau Lengkuas? Jangan Keliru!",
+    "d": "Dua rimpang yang mirip tapi beda rasa. Cara cepat membedakannya lewat aroma dan warna.",
+    "t": "3:35",
+    "bentuk": "rimpang",
+    "w1": "#E0B06A",
+    "w2": "#5FBF7E"
+  },
+  {
+    "id": "v3",
+    "topik": "Pengenalan Tanaman",
+    "j": "Daun Sirih, Si Bentuk Hati",
+    "d": "Berburu daun sirih di pagar rumah dan mengenali ciri-cirinya.",
+    "t": "3:08",
+    "bentuk": "hati",
+    "w1": "#4FA85F",
+    "w2": "#1F7A4C"
+  },
+  {
+    "id": "v4",
+    "topik": "Manfaat Herbal",
+    "j": "Kelakai, Sayur Penambah Darah",
+    "d": "Kenapa pakis rawa ini disebut sayur penambah darah orang Banua?",
+    "t": "3:40",
+    "bentuk": "daun",
+    "w1": "#5FBF7E",
+    "w2": "#1F7A4C"
+  },
+  {
+    "id": "v5",
+    "topik": "Manfaat Herbal",
+    "j": "Sirih Menghentikan Mimisan",
+    "d": "Percobaan sederhana: apa yang membuat daun sirih bisa menahan darah?",
+    "t": "4:02",
+    "bentuk": "hati",
+    "w1": "#6BBF59",
+    "w2": "#1F7A4C"
+  },
+  {
+    "id": "v6",
+    "topik": "Manfaat Herbal",
+    "j": "Jahe Menghangatkan Badan",
+    "d": "Rasakan sendiri kenapa badan hangat setelah minum wedang jahe.",
+    "t": "3:50",
+    "bentuk": "rimpang",
+    "w1": "#E0B06A",
+    "w2": "#A8703C"
+  },
+  {
+    "id": "v7",
+    "topik": "Cara Mengolah",
+    "j": "Membuat Jamu Kunyit Asam",
+    "d": "Parut, peras, saring, dan cicipi. Praktik bersama orang dewasa di rumah.",
+    "t": "5:05",
+    "bentuk": "rimpang",
+    "w1": "#FFC530",
+    "w2": "#5FBF7E"
+  },
+  {
+    "id": "v8",
+    "topik": "Cara Mengolah",
+    "j": "Wedang Jahe Langkah demi Langkah",
+    "d": "Geprek jahe, rebus, tambah gula merah. Lima langkah saja.",
+    "t": "4:20",
+    "bentuk": "rimpang",
+    "w1": "#FF9A1F",
+    "w2": "#A8703C"
+  },
+  {
+    "id": "v9",
+    "topik": "Cara Mengolah",
+    "j": "Teh Biru dari Bunga Telang",
+    "d": "Seduh bunganya, tetesi jeruk nipis, warnanya berubah jadi ungu!",
+    "t": "3:22",
+    "bentuk": "bunga",
+    "w1": "#4A6BE0",
+    "w2": "#1F7A4C"
+  },
+  {
+    "id": "v10",
+    "topik": "Cara Mengolah",
+    "j": "Menanam Kumis Kucing di Pot",
+    "d": "Tanam, siram, panen dalam 30 hari. Cocok jadi proyek kelas.",
+    "t": "4:45",
+    "bentuk": "bunga",
+    "w1": "#EDE7FA",
+    "w2": "#1F7A4C"
+  },
+  {
+    "id": "v11",
+    "topik": "Kearifan Lokal",
+    "j": "Sirih dalam Adat Banjar",
+    "d": "Kenapa daun sirih selalu ada saat menyambut tamu dan acara adat?",
+    "t": "4:30",
+    "bentuk": "hati",
+    "w1": "#4FA85F",
+    "w2": "#7B4FA8"
+  },
+  {
+    "id": "v12",
+    "topik": "Kearifan Lokal",
+    "j": "Herbal dan Hutan Meratus",
+    "d": "Cerita warga Dayak Meratus: tanaman obat butuh hutan yang sehat.",
+    "t": "4:48",
+    "bentuk": "batang",
+    "w1": "#C0563B",
+    "w2": "#5FBF7E"
+  }
+]

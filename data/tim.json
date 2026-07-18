@@ -1,0 +1,42 @@
+[
+  {
+    "nama": "[Nama Ketua]",
+    "peran": "Ketua Tim",
+    "tugas": "Konsep pembelajaran & koordinasi",
+    "prodi": "[Program Studi] — ULM",
+    "w": "var(--daun-muda)",
+    "e": "🧑‍🏫"
+  },
+  {
+    "nama": "[Nama Anggota 1]",
+    "peran": "Anggota",
+    "tugas": "Riset tanaman & konten IPAS",
+    "prodi": "[Program Studi] — ULM",
+    "w": "var(--gambir)",
+    "e": "🔬"
+  },
+  {
+    "nama": "[Nama Anggota 2]",
+    "peran": "Anggota",
+    "tugas": "Pengembang web & AR",
+    "prodi": "[Program Studi] — ULM",
+    "w": "var(--banyu)",
+    "e": "💻"
+  },
+  {
+    "nama": "[Nama Anggota 3]",
+    "peran": "Anggota",
+    "tugas": "Desain visual & maskot",
+    "prodi": "[Program Studi] — ULM",
+    "w": "var(--jingga)",
+    "e": "🎨"
+  },
+  {
+    "nama": "[Nama Dosen]",
+    "peran": "Dosen Pembimbing",
+    "tugas": "Pembimbing akademik",
+    "prodi": "[Fakultas] — ULM",
+    "w": "var(--terong)",
+    "e": "🎓"
+  }
+]
