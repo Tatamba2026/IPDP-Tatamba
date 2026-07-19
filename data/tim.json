@@ -1,38 +1,38 @@
 [
   {
-    "nama": "[Nama Ketua]",
+    "nama": "[M. Rizwan Fazeri]",
     "peran": "Ketua Tim",
     "tugas": "Konsep pembelajaran & koordinasi",
-    "prodi": "[Program Studi] — ULM",
+    "prodi": "[Kehutanan] — ULM",
     "w": "var(--daun-muda)",
     "e": "🧑‍🏫"
   },
   {
-    "nama": "[Nama Anggota 1]",
+    "nama": "[Zibrilyan As-syfa Salim]",
     "peran": "Anggota",
     "tugas": "Riset tanaman & konten IPAS",
-    "prodi": "[Program Studi] — ULM",
+    "prodi": "[kehutanan] — ULM",
     "w": "var(--gambir)",
     "e": "🔬"
   },
   {
-    "nama": "[Nama Anggota 2]",
+    "nama": "[Raisha Mautia Rachma]",
     "peran": "Anggota",
     "tugas": "Pengembang web & AR",
-    "prodi": "[Program Studi] — ULM",
+    "prodi": "[Pendidikan Khusus] — ULM",
     "w": "var(--banyu)",
     "e": "💻"
   },
   {
-    "nama": "[Nama Anggota 3]",
+    "nama": "[Syifa]",
     "peran": "Anggota",
     "tugas": "Desain visual & maskot",
-    "prodi": "[Program Studi] — ULM",
+    "prodi": "[Biologi] — ULM",
     "w": "var(--jingga)",
     "e": "🎨"
   },
   {
-    "nama": "[Nama Dosen]",
+    "nama": "[Dr. Hj Adistina Fitriani, S. Hut,Mp]",
     "peran": "Dosen Pembimbing",
     "tugas": "Pembimbing akademik",
     "prodi": "[Fakultas] — ULM",
